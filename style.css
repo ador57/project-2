@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: sans-serif;
+  transition: 0.4s ease;
+}
+body{
+  background-color: #e9eaf0;
+}
+/* header */
+header{
+  background-color: #172856;
+}
+header nav{
+  width: 85%;
+  margin: 0 auto;
+}
+header nav .logo-search{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #99999978;
+}
+header nav .logo-search .logo{
+  color: #fff;
+  font-size: 27px;
+  font-weight: bold;
+}
+header nav .logo-search .logo span{
+  color: crimson;
+  font-size: 50px;
+  margin: 0 5px 0 0;
+}
+header nav .logo-search .search-box{
+  width: 500px;
+  height: 40px;
+  position: relative;
+}
+header nav .logo-search .search-box input{
+  width: 100%;
+  height: 100%;
+  padding: 0 50px 0 12px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+}
+header nav .logo-search .search-box i{
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  line-height: 40px;
+  height: 100%;
+  width: 50px;
+  border-left: 1px solid #99999978;
+  cursor: pointer;
+}
+header nav .logo-search .icon a{
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+header nav .logo-search .icon a:hover{
+  color: crimson;
+}
+header nav .logo-search .button{
+  display: none;
+}
+header nav ul li{
+  display: inline-block;
+  padding: 18px 0;
+  margin-right: 50px;
+  position: relative;
+}
+header nav ul li a{
+  color: #fff;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+header nav ul li::after{
+  position: absolute;
+  content: '';
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  height: 12px;
+  background-color: #e9eaf0;
+  clip-path: polygon(50% 40%, 0 100%, 100% 100%);
+  transition: all 0.4s ease;
+}
+header nav ul li:hover::after,
+header nav ul li.active::after{
+  width: 12px;
+}
+.checkbtn{
+    font-size: 20px;
+    color: white;
+    float: left;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+  header nav .logo-search .search-box{
+    display: none;
+  }
+  header nav .logo-search .icon{
+    display: none;
+  }
+  .checkbtn{
+    display: block;
+  }
+  header nav ul{
+    left: -100%;
+  }
+  header nav ul li{
+  display: block;
+  padding: 18px 0;
+  margin-right: 50px;
+  position: relative;
+  }
+  header nav ul li a:hover,
+  header nav ul li a.active{
+  color: crimson;
+  }
+  header nav ul li:hover::after,
+  header nav ul li.active::after{
+  width: 0;
+  }
+  .button:checked ~ ul{
+    left: 0;
+  }
+
+}
